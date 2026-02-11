@@ -12,6 +12,12 @@
 `code this is code wow`
 ---
 
+check change
+
+-[] Write the Press Release
+-[] Update the Website
+-[] Contact the Media
+
 
 To Do List for things to complete
 stuff
