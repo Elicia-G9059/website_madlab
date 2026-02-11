@@ -1,0 +1,474 @@
+ 
+*{    background-color: rgb(250, 210, 230);
+    box-sizing: border-box; 
+    margin:0;
+    padding:0;
+    font-family: Arial, Helvetica, sans-serif;
+} 
+
+
+/* -------------------------------------------------- NAV BAR ------------------------------------------------- */
+nav{
+    background: black;
+    border-radius: 20px;
+    padding: 1.5rem;
+    box-shadow: 1px 1px 8px rgba(0, 0, 0, 0.2);
+    margin-top: 1rem;
+    margin-left: 1rem;
+    margin-right: 1rem;
+}
+
+nav ul {
+    list-style: none;
+    background-color: black;
+    margin: 0;
+    padding: 0;
+    display: flex;
+    justify-content: space-around;
+    gap: o.2rem;
+    /*justify-content: flex-end; */
+}
+
+nav ul p a {
+    display: inline;
+    background-color: black;
+    color: white;
+    font-size: 15pt;
+    font-family: Georgia, 'Times New Roman', Times, serif;
+    text-decoration: none;    
+    display: block;
+}
+
+nav ul p a:hover{
+    background-color: rgb(100, 94, 94);
+    border-radius: 5px;
+    cursor: pointer;
+    transform: scale(1.2);
+}
+
+
+
+
+/* ------------------------------------------------------- H1 + MAIN + H2 ---------------------------------------- */
+h1 {
+    font-size: 30pt;
+    font-family: Arial, Helvetica, sans-serif;
+    padding-top: 2rem;
+    padding-bottom: 2rem;
+    text-align: center;
+}
+
+main{
+  margin-right: 4rem;
+  margin-left: 4rem;
+  justify-content: center;
+  text-align: center;  
+}
+
+h2 {
+    font-size: 20pt;
+    text-align: center;
+    font-family: Arial, Helvetica, sans-serif;
+    padding-bottom: 3rem;
+}
+
+
+
+
+
+/* ----------------------------------------------------- FOOTER ---------------------------------------------- */
+footer {
+  margin-top: 4rem;
+  background-color: black;
+  line-height: 0.7;
+  padding: 0.4rem;
+  text-align: center;
+}
+
+footer a {
+  background-color: black;
+  color:white;
+  font-size: 10pt;
+  font-family: Arial, Helvetica, sans-serif;
+}
+
+footer p {
+  background-color: black;
+  color:white;
+  padding: 0.3em;
+  font-size: 10pt;
+  font-family: Arial, Helvetica, sans-serif;
+}
+
+
+
+/* --------------------------------------------------- Home Page BOXES ----------------------------------------- */
+.grid-container {
+  display: grid;
+  grid-template-columns: repeat(auto-fit, minmax(300px, 1fr));
+  margin: 1rem; 
+  flex-direction: column;
+  align-items: center; 
+  width: 100%;
+  height: 100%;
+  color: white;
+  padding-top: 3rem;
+  gap: 2rem;
+  padding: 1rem;
+}
+
+.box{
+  display: grid;
+  padding: 2rem;
+  background-color: hotpink;
+  color: white;
+  border-radius: 20px;
+  font-size: 2rem;
+}
+
+.box p, .box p a{
+  background-color: hotpink;
+  color: white;
+  text-decoration: none;
+}
+
+.box p a{
+  font-weight: bold;
+}
+
+.box img{
+  display: grid;
+  background-color: hotpink;
+  /* border-radius: 20px; */
+  height: 250px; 
+  max-width: 300px;
+}
+
+@media (max-width: 800px) {
+  .recipe {
+    flex-direction: column; 
+    margin: 1rem;           
+    gap: 1.5rem;
+    align-items: center;
+  }
+
+  .box{
+    width: 100%;            
+  }
+
+    .box img {
+    max-width: 80%;     
+  }
+}
+
+
+/* ----------------------------------------------------- HOME + Recipe Long Box ------------------------------------- */
+.longbox{
+    background: rgb(250, 180, 210);
+    border-radius: 20px;
+    padding: 1.5rem;
+    /* box-shadow: 1px 1px 8px rgba(0, 0, 0, 0.2); */
+    margin: 1rem;
+}
+
+
+
+.longbox ul {
+    list-style: none;
+    background-color: rgb(250, 180, 210);    
+    /* background-color: black; */
+    display: flex;
+    justify-content: space-around;
+    flex-wrap: wrap;
+}
+
+.longbox p{
+    /* display: inline;*/
+    background-color: rgb(250, 180, 210);
+    color: white;
+    font-size: 16pt;
+    font-family: Arial, Helvetica, sans-serif;
+    display: block;
+    padding-top: 0.5rem;
+}
+
+.longbox p a{
+   display: inline-block;
+    font-size: 20pt;
+    background-color: hotpink;
+    color: white;
+    padding: 0.5rem;
+    border-radius: 8px;
+    text-decoration: none; 
+    transition: transform 0.3s ease;
+}
+
+.longbox ul p a:hover{
+    background-color: rgb(100, 94, 94);
+    cursor: pointer;
+    transform: scale(1.2);
+}
+
+/* --------------------------------------------------- About Page -------------------------------------------- */
+.img_{  
+  float: right;
+  width: 500px;
+}
+
+.smoothie h2{
+  font-family: Arial, Helvetica, sans-serif;
+  font-size: 20pt;
+  margin-left: 2rem;
+}
+.smoothie p{
+  font-family: Arial, Helvetica, sans-serif;
+  font-size: 18pt;
+  margin-left: 2rem;
+}
+
+.grid {
+  display: grid;
+  justify-content: center;
+  margin: 1rem;
+  grid-template-columns: 1fr 1fr 1fr 1fr;
+  grid-template-rows: 1fr 1fr 1fr 1fr; 
+}
+
+.card{
+  width: 200px;
+  height: 300px;
+  margin: 10px;
+  padding: 2rem;  
+  color: hotpink;
+  font-size: 12pt;
+  font-family: Arial, Helvetica, sans-serif;
+  background-color: lavender;
+  text-align: center;
+  border-radius: 8px;
+  font-size: 2rem;
+}
+
+.card h3{
+  font-size: 20pt;
+  background-color: lavender;
+  font-family: Arial, Helvetica, sans-serif;
+}
+.card p{
+  margin-top: 1rem;
+  font-size: 14pt;
+  background-color: lavender;
+  font-family: Arial, Helvetica, sans-serif;
+}
+
+
+
+
+
+/* ---------------------------------------------------- Recipe Page ---------------------------------------- */
+.recipe {
+  display: flex;
+  justify-content: center;
+  align-items: flex-start;
+  gap: 5rem;
+  margin: 2rem 10rem;
+  background-color: transparent;
+  margin-bottom: 2rem;
+}
+
+.happy, .happy2 {
+  display: flex;
+  flex-direction: column;
+  flex: 1;
+  background-color: hotpink;
+  border-radius: 20px;
+  overflow: hidden;
+
+  /* align-items: center;  */
+  /* transition: transform 0.3s ease; 
+  transition: background-color 0.3s, transform 0.3s; */
+}
+
+.happy2 {
+  background-color: rgb(250, 1, 130);
+  transform: scale(1.1);
+  /* transition: transform 0.3s ease; 
+  transition: background-color 0.3s, transform 0.3s; */
+}
+
+.happy a, .happy2 a { 
+  display: flex;
+  flex-direction: column;
+  align-items: center; 
+  text-decoration: none;
+  width: 100%;
+  height: 100%;
+  color: white;
+  background-color: transparent;
+  padding-top: 3rem;
+}
+
+.happy2 a { 
+  display: flex;
+  flex-direction: column;
+  align-items: center; 
+  text-decoration: none;
+  width: 100%;
+  height: 100%;
+  color: white;
+  background-color:  rgb(250, 1, 130);
+  padding-top: 3rem;
+  transform: scale(1.1);
+}
+
+.happy h2, .happy2 h2 {
+  color: white;
+  background-color: transparent;
+  text-align: center;
+  /* padding-bottom: 1rem; */
+  margin-bottom: 1rem;
+}
+
+.happy2 h2 {
+  color: white;
+  background-color: rgb(250, 1, 130);
+  text-align: center;
+}
+
+.happy img {
+  display: block;
+  height: 250px; 
+  width: 300px; 
+  max-width: 300px; 
+  margin: -1rem 1.5rem 3rem 1.5rem;
+  background-color: transparent;
+}
+
+.happy:hover, happy2:hover{
+  cursor: pointer;
+  background-color: rgb(250, 50, 150);
+  transform: scale(1.1); 
+}
+
+@media (max-width: 800px) {
+  .recipe {
+    flex-direction: column;
+    gap: 1.5rem;
+    align-items: center;
+  }
+
+  .happy, .happy2 {
+    width: 100%;            
+  }
+
+    .happy img, .happy2 img {
+    max-width: 80%;      
+  }
+}
+
+
+
+
+
+
+
+
+img{
+  width: 300px;
+  max-width: 400px;
+  height: auto;
+  object-fit: cover;
+  vertical-align: middle;
+}
+
+.wrapper, .wrapper2{
+  display: flex;
+  flex-wrap: wrap;
+  align-items: center;
+  justify-content: center;
+  gap: 3rem;
+  padding: 1rem;
+}
+
+.wrapper2{
+  flex-direction: row-reverse;
+}
+
+.one{
+  flex: 1;
+  min-width: 300px;
+}
+
+@media (max-width: 800px) {
+  .recipes {
+    flex-direction: column; 
+    gap: 2rem;              
+    margin: 0rem 2rem 2rem 2rem; 
+  }
+}
+
+
+
+
+/* ---------------------------------------------- Food&Drink Recipe Page ----------------------------------------- */
+
+
+
+
+
+
+
+
+
+
+
+
+/* ------------------------------------------------------- Quiz ------------------------------------------------- */
+.quizbox{
+  display: block;
+  flex-wrap: wrap;
+  padding: 2em;
+  background-color: hotpink;
+  border-radius: 20px;
+  /* height: 200px; */
+
+}
+
+
+
+
+
+/* --------------------------------------------------------- GALLERY ------------------------------------------------- */
+.gallery{
+  display: flex;
+  justify-content: center;
+  gap: 4rem;
+  flex-wrap: wrap;
+}
+
+.gallery p{
+  font-size: 15pt;
+  font-family: Arial, Helvetica, sans-serif;
+  text-align: center;
+  margin-left: 10rem;
+  margin-right: 10rem;
+  margin-top: -1rem;
+  margin-bottom: -3rem;
+}
+
+.gallery img{  
+  align-items: center;
+  min-height: 300px;
+  min-width: 300px;
+  border-radius: 1rem;
+}
+
+.gallery img:hover{
+  cursor: pointer;
+  transform: scale(1.1);
+}
+
+
+
+
+
+
