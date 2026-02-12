@@ -102,10 +102,31 @@ footer p {
 
 
 
-/* --------------------------------------------------- Home Page BOXES ----------------------------------------- */
+
+
+/* --------------------------------------------------- Home Background ----------------------------------------- */
+
+.header{
+  max-width: max-content;
+  background-image: linear-gradient(rgba(255, 255, 255, 0.5)), url(images/strawberry\ bowl.jpg);
+  background-color: var(--white);
+  background-size: cover;
+  text-align: center
+  
+}
+
+
+
+
+
+
+
+
+/* ------------------------------------------------- Home Page BOXES ----------------------------------------- */
 .grid-container {
   display: grid;
   grid-template-columns: repeat(auto-fit, minmax(300px, 1fr));
+  justify-content: center;
   margin: 1rem; 
   flex-direction: column;
   align-items: center; 
@@ -117,13 +138,15 @@ footer p {
   padding: 1rem;
 }
 
-.box{
-  display: grid;
-  padding: 2rem;
+.box {
+  display: flex;
+  align-items: center;
   background-color: hotpink;
   color: white;
   border-radius: 20px;
-  font-size: 2rem;
+  padding: 1.5rem;
+  overflow: hidden;
+  font-size: 20pt;/* Keeps image corners inside radius if needed */
 }
 
 .box p, .box p a{
@@ -136,30 +159,53 @@ footer p {
   font-weight: bold;
 }
 
+.box p a{
+   display: inline-block;
+    font-size: 20pt;
+    background-color: rgb(76, 61, 69);
+    color: white;
+    padding: 0.5rem;
+    border-radius: 8px;
+    text-decoration: none; 
+    transition: transform 0.3s ease;
+}
+
+.box p a:hover{
+    background-color: rgb(100, 94, 94);
+    cursor: pointer;
+    transform: scale(1.2);
+}
+
+
+
+
+
+
 .box img{
   display: grid;
-  background-color: hotpink;
-  /* border-radius: 20px; */
+  background-color: hotpink; 
   height: 250px; 
   max-width: 300px;
 }
 
-@media (max-width: 800px) {
-  .recipe {
-    flex-direction: column; 
-    margin: 1rem;           
-    gap: 1.5rem;
-    align-items: center;
+
+@media (max-width: 600px){
+  .box {
+    flex-direction: column;
+    text-align: center;
+    justify-content: center;
   }
 
-  .box{
-    width: 100%;            
-  }
+ .box{
+    width: 100%;
+ }            
 
-    .box img {
-    max-width: 80%;     
+  .box img {
+    max-width: 200px; 
+    margin: 0 auto;
   }
 }
+
 
 
 /* ----------------------------------------------------- HOME + Recipe Long Box ------------------------------------- */
@@ -210,28 +256,130 @@ footer p {
 }
 
 /* --------------------------------------------------- About Page -------------------------------------------- */
-.img_{  
+.smoothie img{
   float: right;
-  width: 500px;
-}
+  width: 400px;
+  margin-top: -6rem;
 
+
+}
 .smoothie h2{
   font-family: Arial, Helvetica, sans-serif;
   font-size: 20pt;
   margin-left: 2rem;
 }
 .smoothie p{
+  padding-top: 2rem;
   font-family: Arial, Helvetica, sans-serif;
   font-size: 18pt;
   margin-left: 2rem;
 }
 
-.grid {
+#title{
+  padding-top: 6rem;
+  text-align: center;
+  justify-content: center;
+}
+
+.info{
+  display: grid;
+  grid-template-columns: repeat(auto-fit, minmax(300px, 1fr));
+  justify-content: center;
+  color: hotpink;  
+   
+}
+
+.learn h2, .vms section{ 
+  font-family: Georgia, 'Times New Roman', Times, serif;
+  background-color: aliceblue;
+  
+}
+
+ .vms{
+  background-color: aliceblue;
+  /* display: flex;
+  flex-direction: column;
+  flex: 1;
+  background-color: hotpink;
+  border-radius: 20px;
+  overflow: hidden; */
+} 
+
+ .vms h3{
+  font-size: 20pt;
+  background-color: lavender;
+
+}
+
+.vms p, .vms b{
+  background-color: lavender;
+} 
+
+/* .grid {
+  padding-top: 3rem;
   display: grid;
   justify-content: center;
   margin: 1rem;
-  grid-template-columns: 1fr 1fr 1fr 1fr;
-  grid-template-rows: 1fr 1fr 1fr 1fr; 
+  grid-template-columns: repeat(auto-fit, minmax(200px, 1fr));
+  /* grid-template-columns: 1fr 1fr 1fr 1fr;
+  grid-template-rows: 1fr 1fr 1fr 1fr;  */
+/*} */
+
+/* .card{
+  width: 200px;
+  height: 300px;
+  margin: 10px;
+  padding: 2rem;  
+  color: hotpink;
+  font-size: 12pt;
+  font-family: Arial, Helvetica, sans-serif;
+  background-color: lavender;
+  text-align: center;
+  border-radius: 8px;
+  font-size: 2rem;
+}
+
+.card h3{
+  font-size: 20pt;
+  background-color: lavender;
+  font-family: Arial, Helvetica, sans-serif;
+}
+.card p{
+  margin-top: 1rem;
+  font-size: 14pt;
+  background-color: lavender;
+  font-family: Arial, Helvetica, sans-serif;
+} */
+
+
+
+
+
+
+.scroller {
+  display: flex;
+  margin: 100px auto;
+  width: 90%;
+  border: 5px solid hotpink;
+  border-radius: 20px;
+  overflow-x: auto;
+  gap: 1rem;
+
+}
+.scroller::-webkit-scrollbar{
+  display: none;
+}
+
+.grid{
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  gap: 1rem;
+  animation: spin 45s infinite linear;
+}
+@keyframes spin {
+  from{translate: 0;}
+  to{translate: -100%;}
 }
 
 .card{
