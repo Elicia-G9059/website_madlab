@@ -1,10 +1,11 @@
  
-*{    background-color: rgb(250, 210, 230);
-    box-sizing: border-box; 
+*{  box-sizing: border-box; 
     margin:0;
     padding:0;
     font-family: Arial, Helvetica, sans-serif;
 } 
+
+body{background-color: rgb(250, 210, 230);}
 
 
 /* -------------------------------------------------- NAV BAR ------------------------------------------------- */
@@ -12,7 +13,7 @@ nav{
     background: black;
     border-radius: 20px;
     padding: 1.5rem;
-    box-shadow: 1px 1px 8px rgba(0, 0, 0, 0.2);
+    box-shadow: 1px 1px 8px rgba(0, 0, 0, 0.3);
     margin-top: 1rem;
     margin-left: 1rem;
     margin-right: 1rem;
@@ -41,7 +42,7 @@ nav ul p a {
 
 nav ul p a:hover{
     background-color: rgb(100, 94, 94);
-    border-radius: 5px;
+    border-radius: 100px;
     cursor: pointer;
     transform: scale(1.2);
 }
@@ -104,14 +105,18 @@ footer p {
 
 
 
-/* --------------------------------------------------- Home Background ----------------------------------------- */
+/* --------------------------------------------------- Home Page Background ----------------------------------------- */
 
 .header{
-  max-width: max-content;
-  background-image: linear-gradient(rgba(255, 255, 255, 0.5)), url(images/strawberry\ bowl.jpg);
+  max-width: 100%;
+  background-image: url(images/Fruit\ Laid\ Out.jpg);
   background-color: var(--white);
   background-size: cover;
-  text-align: center
+  text-align: center;
+  line-height: 10rem;
+  margin-top: 1rem;
+  
+
   
 }
 
@@ -142,6 +147,7 @@ footer p {
   display: flex;
   align-items: center;
   background-color: hotpink;
+  box-shadow: 1px 1px 8px rgba(0, 0, 0, 0.3);
   color: white;
   border-radius: 20px;
   padding: 1.5rem;
@@ -174,6 +180,8 @@ footer p {
     background-color: rgb(100, 94, 94);
     cursor: pointer;
     transform: scale(1.2);
+    transition: transform 0.3s ease; 
+   transition: background-color 0.3s, transform 0.3s; 
 }
 
 
@@ -215,6 +223,7 @@ footer p {
     padding: 1.5rem;
     /* box-shadow: 1px 1px 8px rgba(0, 0, 0, 0.2); */
     margin: 1rem;
+    box-shadow: 1px 1px 8px rgba(0, 0, 0, 0.3);
 }
 
 
@@ -253,6 +262,8 @@ footer p {
     background-color: rgb(100, 94, 94);
     cursor: pointer;
     transform: scale(1.2);
+    transition: transform 0.3s ease; 
+   transition: background-color 0.3s, transform 0.3s; 
 }
 
 /* --------------------------------------------------- About Page -------------------------------------------- */
@@ -281,31 +292,31 @@ footer p {
   justify-content: center;
 }
 
-.info{
+/* .info{
   display: grid;
   grid-template-columns: repeat(auto-fit, minmax(300px, 1fr));
   justify-content: center;
   color: hotpink;  
    
-}
+} */
 
-.learn h2, .vms section{ 
+/* .learn h2, .vms section{ 
   font-family: Georgia, 'Times New Roman', Times, serif;
   background-color: aliceblue;
   
 }
 
  .vms{
-  background-color: aliceblue;
+  background-color: aliceblue; */
   /* display: flex;
   flex-direction: column;
   flex: 1;
   background-color: hotpink;
   border-radius: 20px;
   overflow: hidden; */
-} 
+/* }  */
 
- .vms h3{
+ /* .vms h3{
   font-size: 20pt;
   background-color: lavender;
 
@@ -313,54 +324,55 @@ footer p {
 
 .vms p, .vms b{
   background-color: lavender;
+}  */
+
+.info {
+ display: grid;
+ grid-template-columns: repeat(auto-fit, minmax(200px, 1fr));
+ justify-content: center;
+ /* background-color: lavender; */
+ margin: 1rem;
+ border-radius: 20px;
 } 
 
-/* .grid {
-  padding-top: 3rem;
-  display: grid;
+.learn{
   justify-content: center;
-  margin: 1rem;
-  grid-template-columns: repeat(auto-fit, minmax(200px, 1fr));
-  /* grid-template-columns: 1fr 1fr 1fr 1fr;
-  grid-template-rows: 1fr 1fr 1fr 1fr;  */
-/*} */
-
-/* .card{
-  width: 200px;
-  height: 300px;
-  margin: 10px;
-  padding: 2rem;  
-  color: hotpink;
-  font-size: 12pt;
-  font-family: Arial, Helvetica, sans-serif;
-  background-color: lavender;
   text-align: center;
-  border-radius: 8px;
-  font-size: 2rem;
+  margin-left: 4rem;
+  /* width: 200px;
+  height: 300px;
+  margin: 10px; */
+  color: hotpink;
+  /* font-size: 12pt; */
+  font-family: Arial, Helvetica, sans-serif;
+  /* background-color: lavender; */
+  border-radius: 20px;
 }
 
-.card h3{
-  font-size: 20pt;
-  background-color: lavender;
-  font-family: Arial, Helvetica, sans-serif;
+.learn p, .learn b{
+ /* margin-left: 1rem; */
+ text-align: start;
+ /* background-color: ; */
+
 }
-.card p{
+.learn h3{
+  text-align: center;
   margin-top: 1rem;
-  font-size: 14pt;
-  background-color: lavender;
-  font-family: Arial, Helvetica, sans-serif;
-} */
+  margin-bottom: 0.5rem;
+}
 
 
 
 
 
 
+/* --------------------------------------------------- About Page Scroller -------------------------------------------- */
 .scroller {
   display: flex;
   margin: 100px auto;
   width: 90%;
   border: 5px solid hotpink;
+  
   border-radius: 20px;
   overflow-x: auto;
   gap: 1rem;
@@ -377,6 +389,7 @@ footer p {
   gap: 1rem;
   animation: spin 45s infinite linear;
 }
+
 @keyframes spin {
   from{translate: 0;}
   to{translate: -100%;}
@@ -388,6 +401,7 @@ footer p {
   margin: 10px;
   padding: 2rem;  
   color: hotpink;
+  box-shadow: 1px 1px 8px rgba(0, 0, 0, 0.3);
   font-size: 12pt;
   font-family: Arial, Helvetica, sans-serif;
   background-color: lavender;
@@ -410,8 +424,6 @@ footer p {
 
 
 
-
-
 /* ---------------------------------------------------- Recipe Page ---------------------------------------- */
 .recipe {
   display: flex;
@@ -421,6 +433,7 @@ footer p {
   margin: 2rem 10rem;
   background-color: transparent;
   margin-bottom: 2rem;
+  
 }
 
 .happy, .happy2 {
@@ -430,10 +443,9 @@ footer p {
   background-color: hotpink;
   border-radius: 20px;
   overflow: hidden;
-
-  /* align-items: center;  */
-  /* transition: transform 0.3s ease; 
-  transition: background-color 0.3s, transform 0.3s; */
+  transition: transform 0.3s ease; 
+  transition: background-color 0.3s, transform 0.3s; 
+  box-shadow: 1px 1px 8px rgba(0, 0, 0, 0.3)
 }
 
 .happy2 {
@@ -512,10 +524,6 @@ footer p {
     max-width: 80%;      
   }
 }
-
-
-
-
 
 
 
